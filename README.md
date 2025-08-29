@@ -1,6 +1,5 @@
 # Court-CMS.
 Easily Find out Court Percentage &amp; Pendency 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
