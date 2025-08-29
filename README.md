@@ -17,20 +17,21 @@ Easily Find out Court Percentage &amp; Pendency
         body {
             background: linear-gradient(135deg, #e0e7ff 0%, #c3cfe2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 0;
             color: #333;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: none;
+            margin: 0;
+            width: 100%;
         }
         
         header {
             background: #1a237e;
             color: white;
             padding: 15px 20px;
-            border-radius: 10px 10px 0 0;
+            border-radius: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -104,9 +105,10 @@ Easily Find out Court Percentage &amp; Pendency
         .court-info {
             background: white;
             padding: 20px;
-            border-radius: 0 0 10px 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            border-radius: 0;
+            box-shadow: none;
+            margin-bottom: 0;
+            width: 100%;
         }
         
         .court-name {
@@ -212,12 +214,14 @@ Easily Find out Court Percentage &amp; Pendency
         
         .report {
             background: white;
-            border-radius: 10px;
+            border-radius: 0;
             padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            box-shadow: none;
+            margin-top: 0;
             display: none;
-            border: 1px solid #e0e0e0;
+            border: none;
+            width: 100%;
+            min-height: 100vh;
         }
         
         .report-header {
@@ -371,20 +375,42 @@ Easily Find out Court Percentage &amp; Pendency
         }
         
         @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            
             body * {
                 visibility: hidden;
             }
+            
             .report, .report * {
                 visibility: visible;
             }
+            
             .report {
                 position: absolute;
                 left: 0;
                 top: 0;
                 width: 100%;
+                padding: 0;
+                margin: 0;
+                box-shadow: none;
+                border: none;
             }
+            
             .no-print {
                 display: none;
+            }
+            
+            .report-header {
+                margin-top: 0;
+                padding-top: 0;
+            }
+            
+            .report-table {
+                page-break-inside: avoid;
             }
         }
         
